@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">A4_2P</string>
-    <string name="strMenuInstruction">HI! I\'m AN InStRuCtIoN!!</string>
+    <string name="strMenuInstruction">Click something!</string>
     <string name="strAnzac">Anzac Biscuits</string>
     <string name="strBolognese">Spaghetti Bolognese. With cheese, please.</string>
     <string name="strCroissant">Chocolate Croissant</string>

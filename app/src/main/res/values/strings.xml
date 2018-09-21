@@ -10,4 +10,5 @@
     <string name="strSrcBolognese">https://commons.wikimedia.org/wiki/File:Lutong_Bahay_-_Bolognese_Spaghetti.jpg</string>
     <string name="strSrcCroissant">https://commons.wikimedia.org/wiki/File:Beckmann%27s_Old_World_Bakery_Farmers%27_Market_Chocolate_Croissant.jpg</string>
     <string name="strSrcPizza">https://commons.wikimedia.org/wiki/File:Pizza_with_pineapple.jpg</string>
+    <string name="strDefault">Default Text. Hopefully you\'ll never have to see this.</string>
 </resources>

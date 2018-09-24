@@ -8,6 +8,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Click Listeners for each button.
+     * The char they pass is a key to tell which items viewFood needs to send.
+     */
     private final View.OnClickListener anzacListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Activity for launching the biggerer food view activity.
-     * Switch statements are fun to code. (Subjective)
+     * Switch statements are more fun to than nested if statements. (Subjective)
      * @param item a char key used to identify which food to examine.
      */
     private void viewFood(char item) {
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 b.putInt("srcID", R.string.strSrcPizza);
                 break;
             default:
+                //Stops the launch of the next activity if switch fails.
                 Log.e("Activity Launch", "Could not launch subsequent activity - Switch defaulted");
                 return;
         }

@@ -5,19 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ivBigFood"
-        android:layout_width="0dp"
-        android:layout_height="217dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/strDefault"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
-        app:srcCompat="@android:color/darker_gray" />
-
     <TextView
         android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
@@ -32,18 +19,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvSource"
-        android:layout_width="248dp"
-        android:layout_height="38dp"
+    <!--
+        Default string resources (and @android:colour/darker_grey)
+        are used to populate fields as needed as placeholders.
+        Image is constrained between the header and description to ensure
+        they aren't cut off.
+    -->
+    <ImageView
+        android:id="@+id/ivBigFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/strDefault"
+        app:layout_constraintBottom_toTopOf="@+id/tvSource"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/tvSource"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:text="@string/strDefault"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivBigFood" />
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.a9726446.a4_2p;
+package com.example.a9726446.a5_2p;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

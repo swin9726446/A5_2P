@@ -1,10 +1,12 @@
-package com.example.a9726446.a4_2p;
+package com.example.a9726446.a5_2p;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.a9726446.a4_2p.R;
 
 /**
  * Created by 9726446 on 21/09/2018 at EN302-018

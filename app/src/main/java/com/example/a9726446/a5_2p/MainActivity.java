@@ -1,10 +1,12 @@
-package com.example.a9726446.a4_2p;
+package com.example.a9726446.a5_2p;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import com.example.a9726446.a4_2p.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void viewFood(char item) {
         Intent i = new Intent();
-        i.setClass(getApplicationContext(), com.example.a9726446.a4_2p.ViewActivity.class);
+        i.setClass(getApplicationContext(), ViewActivity.class);
         Bundle b = new Bundle();
         switch (item){
             case 'a':

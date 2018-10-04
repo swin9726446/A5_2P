@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">A4_2P</string>
-    <string name="strMenuInstruction">Click something!</string>
+    <string name="app_name">A5_2P</string>
+    <string name="strMenuInstruction">Tap something!</string>
     <string name="strAnzac">Anzac Biscuits</string>
     <string name="strBolognese">Spaghetti Bolognese. With cheese, please.</string>
     <string name="strCroissant">Chocolate Croissant</string>
@@ -11,4 +11,17 @@
     <string name="strSrcCroissant">https://commons.wikimedia.org/wiki/File:Beckmann%27s_Old_World_Bakery_Farmers%27_Market_Chocolate_Croissant.jpg</string>
     <string name="strSrcPizza">https://commons.wikimedia.org/wiki/File:Pizza_with_pineapple.jpg</string>
     <string name="strDefault">Default Text. Hopefully you\'ll never have to see this.</string>
+    <string name="strDteAnzac">04/04/2006</string>
+    <string name="strDteBolognese">12/10/2009</string>
+    <string name="strDteCroissant">21/5/2010</string>
+    <string name="strDtePizza">22/2/2009</string>
+    <string name="strEditInstruction">Changing Metadata</string>
+    <string name="strImage">Image:</string>
+    <string name="strSource">Source:</string>
+    <string name="strTitle">Title:</string>
+    <string name="strKeywords">Keywords</string>
+    <string name="strDate">Date:</string>
+    <string name="strShare">Sharing:</string>
+    <string name="tvFinder">Obtained By:</string>
+    <string name="strRating">Rating:</string>
 </resources>

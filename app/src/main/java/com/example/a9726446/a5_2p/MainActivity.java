@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.example.a9726446.a4_2p.R;
-
 public class MainActivity extends AppCompatActivity {
 
     /**

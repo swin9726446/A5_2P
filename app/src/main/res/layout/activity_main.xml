@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a9726446.a4_2p.com.example.a9726446.a5_2p.MainActivity"
+    tools:context="com.example.a9726446.a5_2p.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
@@ -28,16 +28,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:gravity="center"
+        android:shrinkColumns="0,1"
         app:layout_constraintBottom_toTopOf="@+id/tvAttribution"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInstruction">
 
+        <!-- Images for Image Row 1 -->
         <TableRow
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
+            android:layout_height="match_parent">
 
             <ImageButton
                 android:id="@+id/ibtnCroissant"
@@ -49,12 +50,54 @@
 
             <ImageButton
                 android:id="@+id/ibtnAnzac"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strAnzac"
                 app:srcCompat="@drawable/anzac_320px" />
         </TableRow>
 
+        <!-- Names for Image Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLblCroissant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strCroissant"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvLblAnzac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strAnzac"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <!-- Dates for Image Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/tvDteCroissant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strDteCroissant"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDteAnzac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strDteAnzac"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <!-- Images for Image Row 2 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -69,10 +112,51 @@
 
             <ImageButton
                 android:id="@+id/ibtnPizza"
+                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strPizza"
                 app:srcCompat="@drawable/pizza_320px" />
+        </TableRow>
+
+        <!-- Names for Image Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLblBolognese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strBolognese"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvLblPizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strPizza"
+                android:textAlignment="center" />
+        </TableRow>
+
+        <!-- Dates for Image Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvDteBolognese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strDteBolognese"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tvDtePizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/strDtePizza"
+                android:textAlignment="center" />
         </TableRow>
 
     </TableLayout>

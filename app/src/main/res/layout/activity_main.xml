@@ -50,7 +50,7 @@
 
             <ImageButton
                 android:id="@+id/ibtnAnzac"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strAnzac"
@@ -112,7 +112,7 @@
 
             <ImageButton
                 android:id="@+id/ibtnPizza"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strPizza"

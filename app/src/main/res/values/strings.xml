@@ -16,12 +16,12 @@
     <string name="strDteCroissant">21/5/2010</string>
     <string name="strDtePizza">22/2/2009</string>
     <string name="strEditInstruction">Changing Metadata</string>
-    <string name="strImage">Image:</string>
-    <string name="strSource">Source:</string>
-    <string name="strTitle">Title:</string>
+    <string name="strImage">Image</string>
+    <string name="strSource">Source</string>
+    <string name="strTitle">Title</string>
     <string name="strKeywords">Keywords</string>
-    <string name="strDate">Date:</string>
-    <string name="strShare">Sharing:</string>
-    <string name="tvFinder">Obtained By:</string>
-    <string name="strRating">Rating:</string>
+    <string name="strDate">Date</string>
+    <string name="strShare">Sharing</string>
+    <string name="tvFinder">Obtained By</string>
+    <string name="strRating">Rating</string>
 </resources>

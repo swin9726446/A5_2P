@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Activity for launching the biggerer food view activity.
+     * Activity for launching the bigger food view activity.
      * Switch statements are more fun to than nested if statements. (Subjective)
      * @param item a char key used to identify which food to examine.
      */
@@ -49,22 +49,22 @@ public class MainActivity extends AppCompatActivity {
         Bundle b = new Bundle();
         switch (item){
             case 'a':
-                b.putInt("imageID", R.drawable.anzac_1024px);
+                b.putInt("imageID", R.drawable.anzac_320px);
                 b.putInt("captionID", R.string.strAnzac);
                 b.putInt("srcID", R.string.strSrcAnzac);
                 break;
             case 'b':
-                b.putInt("imageID", R.drawable.bolognese_1024px);
+                b.putInt("imageID", R.drawable.bolognese_320px);
                 b.putInt("captionID", R.string.strBolognese);
                 b.putInt("srcID", R.string.strSrcBolognese);
                 break;
             case 'c':
-                b.putInt("imageID", R.drawable.croissant_1024px);
+                b.putInt("imageID", R.drawable.croissant_320px);
                 b.putInt("captionID", R.string.strCroissant);
                 b.putInt("srcID", R.string.strSrcCroissant);
                 break;
             case 'p':
-                b.putInt("imageID", R.drawable.pizza_1024px);
+                b.putInt("imageID", R.drawable.pizza_320px);
                 b.putInt("captionID", R.string.strPizza);
                 b.putInt("srcID", R.string.strSrcPizza);
                 break;

@@ -28,14 +28,14 @@
     -->
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:paddingBottom="@dimen/dimPadd"
+        android:gravity="center|fill"
+        android:paddingBottom="@dimen/dimPadding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,8 +78,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="@string/strTitle"
                 android:inputType="textPersonName"
-                android:text="@string/strDefault"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
 
         </TableRow>
@@ -100,8 +100,8 @@
                 android:layout_width="352dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="@string/strSource"
                 android:inputType="textPersonName"
-                android:text="@string/strDefault"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
 
         </TableRow>
@@ -122,8 +122,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="@string/strKeywords"
                 android:inputType="textPersonName"
-                android:text="@string/strDefault"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
 
@@ -143,10 +143,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:focusedByDefault="true"
-                android:inputType="datetime"
-                android:textAppearance="@android:style/TextAppearance.Material.Small"
-                tools:focusable="false" />
+                android:hint="@string/strDate"
+                android:inputType="date"
+                android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
 
         <TableRow
@@ -183,8 +182,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="@string/tvFinder"
                 android:inputType="textPersonName"
-                android:text="@string/strDefault"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
 
@@ -204,8 +203,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="@string/strRating"
                 android:inputType="textPersonName"
-                android:text="@string/strDefault"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
     </TableLayout>

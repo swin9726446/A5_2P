@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+     * @param name image name
+     * @param src image source
+     * @param key key words, comma separated
+     * @param date date image was obtained
+     * @param email finder's email
+     * @param rating between 0 and 5 inclusive
+     * @param shared if sharing is to be enabled
+    -->
+    <array name="anzac">
+        <item>Anzac Biscuits</item>
+        <item>https://commons.wikimedia.org/wiki/File:ANZAC_biscuits.JPG</item>
+        <item>anzac, biscuit, australian</item>
+        <item>04/04/2006</item>
+        <item>9726446@student.swin.edu.au</item>
+        <item>5</item>
+        <item>true</item>
+    </array>
+    <array name="bolognese">
+        <item>Spaghetti Bolognese. With cheese, please.</item>
+        <item>https://commons.wikimedia.org/wiki/File:Lutong_Bahay_-_Bolognese_Spaghetti.jpg</item>
+        <item>spaghetti, bolognese, itallian</item>
+        <item>12/10/2009</item>
+        <item>9726446@student.swin.edu.au</item>
+        <item>4</item>
+        <item>true</item>
+    </array>
+    <array name="croissant">
+        <item>Chocolate Croissant</item>
+        <item>https://commons.wikimedia.org/wiki/File:Beckmann%27s_Old_World_Bakery_Farmers%27_Market_Chocolate_Croissant.jpg</item>
+        <item>chocolate, croissant, pastry</item>
+        <item>21/5/2010</item>
+        <item>9726446@student.swin.edu.au</item>
+        <item>4</item>
+        <item>false</item>
+    </array>
+    <array name="pizza">
+        <item>Pizza with Pineapple! Controversial!</item>
+        <item>https://commons.wikimedia.org/wiki/File:Pizza_with_pineapple.jpg</item>
+        <item>pizza, pineapple, hawaiian, controversy</item>
+        <item>22/2/2009</item>
+        <item>9726446@student.swin.edu.au</item>
+        <item>3</item>
+        <item>false</item>
+    </array>
+</resources>

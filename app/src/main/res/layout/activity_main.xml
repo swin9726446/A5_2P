@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInstruction">
 
-        <!- - Images for Image Row 1 - ->
+        <!-- Images for Image Row 1 -->
         <TableRow
             android:gravity="center"
             android:layout_width="match_parent"
@@ -46,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/strCroissant"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/croissant_320px" />
 
             <ImageButton
@@ -54,11 +53,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strAnzac"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/anzac_320px" />
         </TableRow>
 
-        <!- - Names for Image Row 1 - ->
+        <!-- Names for Image Row 1 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -67,18 +66,18 @@
                 android:id="@+id/tvLblCroissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strCroissant"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvLblAnzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strAnzac"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
-        <!- - Dates for Image Row 1 - ->
+        <!-- Dates for Image Row 1 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
@@ -87,18 +86,18 @@
                 android:id="@+id/tvDteCroissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteCroissant"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvDteAnzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteAnzac"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
-        <!- - Images for Image Row 2 - ->
+        <!-- Images for Image Row 2 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -108,7 +107,7 @@
                 android:id="@+id/ibtnBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strBolognese"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/bolognese_320px" />
 
             <ImageButton
@@ -116,11 +115,11 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strPizza"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/pizza_320px" />
         </TableRow>
 
-        <!- - Names for Image Row 2 - ->
+        <!-- Names for Image Row 2 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -129,18 +128,18 @@
                 android:id="@+id/tvLblBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strBolognese"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvLblPizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strPizza"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
-        <!- - Dates for Image Row 2 - ->
+        <!-- Dates for Image Row 2 -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -149,14 +148,14 @@
                 android:id="@+id/tvDteBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteBolognese"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvDtePizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDtePizza"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -177,7 +176,7 @@
 
 </android.support.constraint.ConstraintLayout>
 
-<!- - -->
+<!--
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -213,6 +212,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
-
-
-<!-- -->
+ -->

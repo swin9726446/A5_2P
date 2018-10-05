@@ -12,9 +12,18 @@ import android.os.Parcelable;
 
 public class Image implements Parcelable {
 
+    //todo: convert to List<String>
     private String name = "";
-    private String grade = "";
-    private boolean complete = false;
+    private String source = "";
+    private String keywords = "";
+    private String date ="";
+    private boolean isShared = false;
+    private String srcEmail = "";
+    private int rating = 0;
+
+//    private String name = "";
+//    private String grade = "";
+//    private boolean complete = false;
 
     public static final Parcelable.Creator<Image> CREATOR = new Parcelable.Creator<Image>(){
         //Construct object using parcel
@@ -29,29 +38,32 @@ public class Image implements Parcelable {
         }
     };
 
-    /**
-     * Main Constructor
-     * @param name
-     * @param grade
-     * @param complete
-     */
-    public Image(String name, String grade, boolean complete) {
-        update(name, grade, complete);
-    }
+    //TODO: Constructors
+    //public Image (String name, String source,)
 
-    /**
-     * For when constructed from Parcels
-     * @param p
-     */
-    private Image (Parcel p){
-        update(p.readString(), p.readString(), p.readInt() == 1);
-    }
-
-    private void update(String name, String grade, boolean complete) {
-        this.name = name;
-        this.grade = grade;
-        this.complete = complete;
-    }
+//    /**
+//     * Main Constructor
+//     * @param name
+//     * @param grade
+//     * @param complete
+//     */
+//    public Image(String name, String grade, boolean complete) {
+//        update(name, grade, complete);
+//    }
+//
+//    /**
+//     * For when constructed from Parcels
+//     * @param p
+//     */
+//    private Image (Parcel p){
+//        update(p.readString(), p.readString(), p.readInt() == 1);
+//    }
+//
+//    private void update(String name, String grade, boolean complete) {
+//        this.name = name;
+//        this.grade = grade;
+//        this.complete = complete;
+//    }
 
     /**
      * I'm pretty sure this is just for compliance.

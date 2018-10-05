@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Included for the sake of sample code -->
+<resources><string-array name="grades">
+    <item>HD</item>
+    <item>D</item>
+    <item>C</item>
+    <item>P</item>
+</string-array></resources>

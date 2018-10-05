@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:contentDescription="@string/strCroissant"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/croissant_320px" />
 
             <ImageButton
@@ -53,7 +53,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strAnzac"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/anzac_320px" />
         </TableRow>
 
@@ -66,14 +66,14 @@
                 android:id="@+id/tvLblCroissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strCroissant"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvLblAnzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strAnzac"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -86,14 +86,14 @@
                 android:id="@+id/tvDteCroissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteCroissant"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvDteAnzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteAnzac"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -107,7 +107,7 @@
                 android:id="@+id/ibtnBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strBolognese"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/bolognese_320px" />
 
             <ImageButton
@@ -115,7 +115,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/strPizza"
+                android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/pizza_320px" />
         </TableRow>
 
@@ -128,14 +128,14 @@
                 android:id="@+id/tvLblBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strBolognese"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvLblPizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strPizza"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -148,14 +148,14 @@
                 android:id="@+id/tvDteBolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDteBolognese"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvDtePizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/strDtePizza"
+                android:text="@string/strDefault"
                 android:textAlignment="center" />
         </TableRow>
 
@@ -175,3 +175,41 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
+
+<!--
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/task_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No data"
+        android:textSize="40dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/get_data" />
+
+    <Button
+        android:id="@+id/get_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="buttonHandler"
+        android:text="Get data"
+        app:layout_constraintBottom_toTopOf="@+id/task_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+ -->

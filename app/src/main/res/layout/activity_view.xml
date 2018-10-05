@@ -52,7 +52,7 @@
                 android:text="@string/strImage" />
 
             <ImageView
-                android:id="@+id/ivBigFood"
+                android:id="@+id/ivFood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strDefault"
@@ -70,11 +70,11 @@
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etTitle"
+                android:labelFor="@+id/etName"
                 android:text="@string/strTitle" />
 
             <EditText
-                android:id="@+id/etTitle"
+                android:id="@+id/etName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -159,7 +159,7 @@
                 android:text="@string/strShare" />
 
             <ToggleButton
-                android:id="@+id/toggleButton"
+                android:id="@+id/tbShare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strShare" />
@@ -171,19 +171,19 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvFinder"
+                android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etFinder"
+                android:labelFor="@+id/etEmail"
                 android:text="@string/tvFinder" />
 
             <EditText
-                android:id="@+id/etFinder"
+                android:id="@+id/etEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/tvFinder"
-                android:inputType="textPersonName"
+                android:inputType="textWebEmailAddress"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
 
@@ -210,3 +210,46 @@
     </TableLayout>
 
 </android.support.constraint.ConstraintLayout>
+
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ViewActivity">
+
+    <EditText
+        android:id="@+id/task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Task name" />
+
+
+    <Spinner
+        android:id="@+id/grade_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/grades" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:onClick="onCheckboxClicked"
+        android:text="Complete?" />
+
+</LinearLayout>
+-->

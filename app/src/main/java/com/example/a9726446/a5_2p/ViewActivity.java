@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import java.text.SimpleDateFormat;
@@ -24,7 +25,6 @@ import java.util.Locale;
 public class ViewActivity extends AppCompatActivity {
     //Holder local vars, required for various reasons.
     int imageId;
-    boolean isShared = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -33,22 +33,18 @@ public class ViewActivity extends AppCompatActivity {
         initaliseUI();
     }
 
-    public void onCheckboxClicked(View view) {
-        isShared = ((CheckBox) view).isChecked();
-    }
-
     public void onBackPressed() {
         Intent i = new Intent();
         //  id, name, src, key, date, email, rating, shared
         Image image = new Image(
                 imageId,
-                ((EditText)findViewById(R.id.etName)).getText().toString(),
-                ((EditText)findViewById(R.id.etSrc)).getText().toString(),
-                ((EditText)findViewById(R.id.etKey)).getText().toString(),
-                ((EditText)findViewById(R.id.etDate)).getText().toString(),
-                ((EditText)findViewById(R.id.etEmail)).getText().toString(),
-                ((EditText)findViewById(R.id.etRating)).getText().toString(),
-                isShared);
+                ((EditText)findViewById(R.id.et_name)).getText().toString(),
+                ((EditText)findViewById(R.id.et_source)).getText().toString(),
+                ((EditText)findViewById(R.id.et_key)).getText().toString(),
+                ((TextView)findViewById(R.id.tv_date_view)).getText().toString(),
+                ((EditText)findViewById(R.id.et_email)).getText().toString(),
+                ((EditText)findViewById(R.id.et_rating)).getText().toString(),
+                ((ToggleButton)findViewById(R.id.tb_share)).isChecked());
         i.putExtra("image", image);
         setResult(Activity.RESULT_OK, i);
         finish();
@@ -66,15 +62,15 @@ public class ViewActivity extends AppCompatActivity {
                 finish();
                 return;
             }
-            ((ImageView) findViewById(R.id.ivFood)).setImageResource(image.getResourceID());
+            ((ImageView) findViewById(R.id.iv_food)).setImageResource(image.getResourceID());
             imageId = image.getResourceID(); //because android is silly and can't get it after the fact. :/
-            ((EditText) findViewById(R.id.etName)).setText(image.getName());
-            ((EditText) findViewById(R.id.etSrc)).setText(image.getSrc());
-            ((EditText) findViewById(R.id.etKey)).setText(image.getKey());
-            ((EditText) findViewById(R.id.etDate)).setText(image.getDate());
-            ((ToggleButton) findViewById(R.id.tbShare)).setChecked(image.isShared());
-            ((EditText) (findViewById(R.id.etEmail))).setText(image.getEmail());
-            ((EditText) findViewById(R.id.etRating)).setText(image.getRating());
+            ((EditText) findViewById(R.id.et_name)).setText(image.getName());
+            ((EditText) findViewById(R.id.et_source)).setText(image.getSrc());
+            ((EditText) findViewById(R.id.et_key)).setText(image.getKey());
+            ((TextView) findViewById(R.id.tv_date_view)).setText(image.getDate());
+            ((ToggleButton) findViewById(R.id.tb_share)).setChecked(image.isShared());
+            ((EditText) (findViewById(R.id.et_email))).setText(image.getEmail());
+            ((EditText) findViewById(R.id.et_rating)).setText(image.getRating());
 
         } catch (NullPointerException npe) {
             Log.e("Bundle Error (View)", npe.toString());
@@ -87,7 +83,7 @@ public class ViewActivity extends AppCompatActivity {
      * With guidance from https://stackoverflow.com/questions/14933330/datepicker-how-to-popup-datepicker-when-click-on-edittext#
      */
     private void startCalendar() {
-        final EditText editText = (EditText) findViewById(R.id.etDate);
+        final TextView textView = findViewById(R.id.tv_date_view);
         final DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -96,11 +92,11 @@ public class ViewActivity extends AppCompatActivity {
                 aCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 String formatStr = "dd/MM/yy"; //Calendar Format
                 SimpleDateFormat sdf = new SimpleDateFormat(formatStr, Locale.ENGLISH);
-                editText.setText(sdf.format(aCalendar.getTime()));
+                textView.setText(sdf.format(aCalendar.getTime()));
             }
         };
 
-        editText.setOnClickListener(new View.OnClickListener() {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new DatePickerDialog(ViewActivity.this, dateSetListener,

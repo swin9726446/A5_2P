@@ -7,7 +7,8 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/tv_header"
+        style="@style/MetaLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -39,20 +40,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader">
+        app:layout_constraintTop_toBottomOf="@+id/tv_header">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvImg"
+                android:id="@+id/tv_img"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strImage" />
 
             <ImageView
-                android:id="@+id/ivFood"
+                android:id="@+id/iv_food"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strDefault"
@@ -67,14 +69,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tv_title"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etName"
+                android:labelFor="@+id/et_name"
                 android:text="@string/strTitle" />
 
             <EditText
-                android:id="@+id/etName"
+                android:id="@+id/et_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -89,14 +92,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvSrc"
+                android:id="@+id/tv_source"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@id/etSrc"
+                android:labelFor="@id/et_source"
                 android:text="@string/strSource" />
 
             <EditText
-                android:id="@+id/etSrc"
+                android:id="@+id/et_source"
                 android:layout_width="352dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -111,14 +115,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvKey"
+                android:id="@+id/tv_key"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@id/etKey"
+                android:labelFor="@id/et_key"
                 android:text="@string/strKeywords" />
 
             <EditText
-                android:id="@+id/etKey"
+                android:id="@+id/et_key"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -132,19 +137,21 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvDate"
+                android:id="@+id/tv_date"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etDate"
+                android:labelFor="@+id/tv_date_view"
                 android:text="@string/strDate" />
 
-            <EditText
-                android:id="@+id/etDate"
+            <TextView
+                android:id="@+id/tv_date_view"
+                style="?attr/editTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/strDate"
-                android:inputType="date"
+                android:inputType="none"
+                android:text="@string/strDate"
                 android:textAppearance="@android:style/TextAppearance.Material.Small" />
         </TableRow>
 
@@ -153,13 +160,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvShare"
+                android:id="@+id/tv_share"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strShare" />
 
             <ToggleButton
-                android:id="@+id/tbShare"
+                android:id="@+id/tb_share"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strShare" />
@@ -171,14 +179,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvEmail"
+                android:id="@+id/tv_email"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etEmail"
+                android:labelFor="@+id/et_email"
                 android:text="@string/tvFinder" />
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/et_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -192,14 +201,15 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvRating"
+                android:id="@+id/tv_rating"
+                style="@style/MetaLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:labelFor="@+id/etRating"
+                android:labelFor="@+id/et_rating"
                 android:text="@string/strRating" />
 
             <EditText
-                android:id="@+id/etRating"
+                android:id="@+id/et_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"

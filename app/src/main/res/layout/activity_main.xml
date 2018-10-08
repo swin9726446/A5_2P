@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/tvInstruction"
+        android:id="@+id/tv_instruction"
         android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:layout_marginEnd="8dp"
@@ -29,10 +29,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:shrinkColumns="0,1"
-        app:layout_constraintBottom_toTopOf="@+id/tvAttribution"
+        app:layout_constraintBottom_toTopOf="@+id/tv_attribution"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInstruction">
+        app:layout_constraintTop_toBottomOf="@+id/tv_instruction">
 
         <!-- Images for Image Row 1 -->
         <TableRow
@@ -41,7 +41,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
-                android:id="@+id/ibtnCroissant"
+                android:id="@+id/ib_croissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
@@ -49,7 +49,7 @@
                 app:srcCompat="@drawable/croissant_320px" />
 
             <ImageButton
-                android:id="@+id/ibtnAnzac"
+                android:id="@+id/ib_anzac"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,14 +63,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvLblCroissant"
+                android:id="@+id/tv_label_croissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/tvLblAnzac"
+                android:id="@+id/tv_label_anzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
@@ -83,14 +83,14 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:id="@+id/tvDteCroissant"
+                android:id="@+id/tv_date_croissant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/tvDteAnzac"
+                android:id="@+id/tv_date_anzac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
@@ -104,14 +104,14 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/ibtnBolognese"
+                android:id="@+id/ib_bolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/strDefault"
                 app:srcCompat="@drawable/bolognese_320px" />
 
             <ImageButton
-                android:id="@+id/ibtnPizza"
+                android:id="@+id/ib_pizza"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,14 +125,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvLblBolognese"
+                android:id="@+id/tv_label_bolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/tvLblPizza"
+                android:id="@+id/tv_label_pizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
@@ -145,14 +145,14 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvDteBolognese"
+                android:id="@+id/tv_date_bolognese"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/tvDtePizza"
+                android:id="@+id/tv_date_pizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/strDefault"
@@ -162,7 +162,7 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/tvAttribution"
+        android:id="@+id/tv_attribution"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"

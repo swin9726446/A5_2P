@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--
+    Index of contained images:
+    -->
+    <string-array name="foods">
+        <item>anzac</item>
+        <item>bolognese</item>
+        <item>croissant</item>
+        <item>pizza</item>
+    </string-array>
+
+    <!--
      * @param name image name
      * @param src image source
      * @param key key words, comma separated

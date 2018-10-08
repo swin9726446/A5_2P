@@ -2,7 +2,6 @@ package com.example.a9726446.a5_2p;
 
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.support.annotation.StyleableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,12 +41,9 @@ public class MainActivity extends AppCompatActivity {
     };
 
     /**
-     * The four images being displayed
+     * Array of the four images being displayed
      */
-    private Image imageAnzac;
-    private Image imageBolognese;
-    private Image imageCroissaunt;
-    private Image imagePizza;
+    private Image imageArray[];
 
     /**
      * Activity for launching the metadata food view activity.
@@ -61,19 +57,19 @@ public class MainActivity extends AppCompatActivity {
         int request_code;
         switch (item){
             case 'a':
-                i.putExtra("image", imageAnzac);
+                i.putExtra("image", imageArray[0]);
                 request_code = 1;
                 break;
             case 'b':
-                i.putExtra("image", imageBolognese);
+                i.putExtra("image", imageArray[1]);
                 request_code = 2;
                 break;
             case 'c':
-                i.putExtra("image", imageCroissaunt);
+                i.putExtra("image", imageArray[2]);
                 request_code = 3;
                 break;
             case 'p':
-                i.putExtra("image", imagePizza);
+                i.putExtra("image", imageArray[3]);
                 request_code = 16;
                 break;
             default:
@@ -92,19 +88,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initaliseUI() {
-        findViewById(R.id.ibtnAnzac).setOnClickListener(anzacListener);
-        findViewById(R.id.ibtnBolognese).setOnClickListener(bologneseListener);
-        findViewById(R.id.ibtnCroissant).setOnClickListener(croissantListener);
-        findViewById(R.id.ibtnPizza).setOnClickListener(pizzaListener);
+        int length = getResources().getStringArray(R.array.foods).length;
+        imageArray = new Image[length];
+        for (int i = 0; i < length; i += 1){
+            setUpImageButton(i);
+        }
 
+        findViewById(R.id.ib_anzac).setOnClickListener(anzacListener);
+        findViewById(R.id.ib_bolognese).setOnClickListener(bologneseListener);
+        findViewById(R.id.ib_croissant).setOnClickListener(croissantListener);
+        findViewById(R.id.ib_pizza).setOnClickListener(pizzaListener);
+    }
 
-        //This section loads each image's metadata from file.
-        //  id, name, src, key, date, email, rating, shared
-        @StyleableRes //Not sure why I need to do this way but eh.
+    //This section loads each image's metadata from file.
+    //  id, name, src, key, date, email, rating, shared
+    private void setUpImageButton (int index){
+        TypedArray typedArray = getResources().obtainTypedArray(getResources().getIdentifier(
+                        getResources().getStringArray(R.array.foods)[index],
+                        "array", getPackageName()
+                ));
         int i = 0;
-        TypedArray typedArray = getResources().obtainTypedArray(R.array.anzac);
-        imageAnzac = new Image(
-                R.drawable.anzac_320px,
+        imageArray[index] = new Image(
+                getResources().getIdentifier(
+                        getResources().getStringArray(R.array.foods)[index] + "_320px",
+                        "drawable", getPackageName()
+                ),
                 typedArray.getString(i),
                 typedArray.getString(i+=1),
                 typedArray.getString(i+=1),
@@ -113,57 +121,27 @@ public class MainActivity extends AppCompatActivity {
                 typedArray.getString(i+=1),
                 typedArray.getBoolean(i, false)
         );
-        findViewById(R.id.ibtnAnzac).setContentDescription(imageAnzac.getName());
-        ((TextView) findViewById(R.id.tvLblAnzac)).setText(imageAnzac.getName());
-        ((TextView) findViewById(R.id.tvDteAnzac)).setText(imageAnzac.getDate());
 
-        i = 0;
-        typedArray = getResources().obtainTypedArray(R.array.bolognese);
-        imageBolognese = new Image(
-                R.drawable.anzac_320px,
-                typedArray.getString(i),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getBoolean(i, false)
-        );
-        findViewById(R.id.ibtnBolognese).setContentDescription(imageBolognese.getName());
-        ((TextView) findViewById(R.id.tvLblBolognese)).setText(imageBolognese.getName());
-        ((TextView) findViewById(R.id.tvDteBolognese)).setText(imageBolognese.getDate());
+        ((ImageButton) findViewById(getResources().getIdentifier(
+                "ib_"+ getResources().getStringArray(R.array.foods)[index],
+                "id", getPackageName())
+        )).setImageResource(imageArray[index].getResourceID());
 
-        i = 0;
-        typedArray = getResources().obtainTypedArray(R.array.croissant);
-        imageCroissaunt = new Image(
-                R.drawable.anzac_320px,
-                typedArray.getString(i),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getBoolean(i, false)
-        );
-        findViewById(R.id.ibtnCroissant).setContentDescription(imageCroissaunt.getName());
-        ((TextView) findViewById(R.id.tvLblCroissant)).setText(imageCroissaunt.getName());
-        ((TextView) findViewById(R.id.tvDteCroissant)).setText(imageCroissaunt.getDate());
+        findViewById(getResources().getIdentifier(
+                "ib_"+ getResources().getStringArray(R.array.foods)[index],
+                "id", getPackageName())
+        ).setContentDescription(imageArray[index].getName());
 
-        i = 0;
-        typedArray = getResources().obtainTypedArray(R.array.pizza);
-        imagePizza = new Image(
-                R.drawable.anzac_320px,
-                typedArray.getString(i),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getString(i+=1),
-                typedArray.getBoolean(i, false)
-        );
-        findViewById(R.id.ibtnPizza).setContentDescription(imagePizza.getName());
-        ((TextView) findViewById(R.id.tvLblPizza)).setText(imagePizza.getName());
-        ((TextView) findViewById(R.id.tvDtePizza)).setText(imagePizza.getDate());
+        ((TextView) findViewById(getResources().getIdentifier(
+                "tv_label_"+ getResources().getStringArray(R.array.foods)[index],
+                "id", getPackageName())
+        )).setText(imageArray[index].getName());
+
+        ((TextView) findViewById(getResources().getIdentifier(
+                "tv_date_"+ getResources().getStringArray(R.array.foods)[index],
+                "id", getPackageName())
+        )).setText(imageArray[index].getDate());
+
         typedArray.recycle();
     }
 
@@ -182,21 +160,24 @@ public class MainActivity extends AppCompatActivity {
             Image image = intent.getParcelableExtra("image");
             switch (requestCode){
                 case 1: //anzac
-                    ((TextView) findViewById(R.id.tvLblAnzac)).setText(image.getName());
-                    ((TextView) findViewById(R.id.tvDteAnzac)).setText(image.getDate());
-                    ((ImageButton) findViewById(R.id.ibtnAnzac)).setContentDescription(image.getName());
+                    ((TextView) findViewById(R.id.tv_label_anzac)).setText(image.getName());
+                    ((TextView) findViewById(R.id.tv_date_anzac)).setText(image.getDate());
+                    (findViewById(R.id.ib_anzac)).setContentDescription(image.getName());
                     break;
                 case 2: //bolognese
-                    ((TextView) findViewById(R.id.tvLblBolognese)).setText(image.getName());
-                    ((TextView) findViewById(R.id.tvDteBolognese)).setText(image.getDate());
+                    ((TextView) findViewById(R.id.tv_label_bolognese)).setText(image.getName());
+                    ((TextView) findViewById(R.id.tv_date_bolognese)).setText(image.getDate());
+                    (findViewById(R.id.ib_bolognese)).setContentDescription(image.getName());
                     break;
                 case 3: //croissant
-                    ((TextView) findViewById(R.id.tvLblCroissant)).setText(image.getName());
-                    ((TextView) findViewById(R.id.tvDteCroissant)).setText(image.getDate());
+                    ((TextView) findViewById(R.id.tv_label_croissant)).setText(image.getName());
+                    ((TextView) findViewById(R.id.tv_date_croissant)).setText(image.getDate());
+                    (findViewById(R.id.ib_croissant)).setContentDescription(image.getName());
                     break;
                 case 16: //pizza
-                    ((TextView) findViewById(R.id.tvLblPizza)).setText(image.getName());
-                    ((TextView) findViewById(R.id.tvDtePizza)).setText(image.getDate());
+                    ((TextView) findViewById(R.id.tv_label_pizza)).setText(image.getName());
+                    ((TextView) findViewById(R.id.tv_date_pizza)).setText(image.getDate());
+                    (findViewById(R.id.ib_pizza)).setContentDescription(image.getName());
                     break;
                 default:
                     //Stops the launch of the next activity if switch fails.
